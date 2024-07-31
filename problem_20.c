@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main()
 {
     int arow = 2, acol = 3;
@@ -14,7 +15,7 @@ int main()
     {
         for (int j = 0; j < acol; j++)
         {
-            printf("Enter elements for [%d][%d]:\n", i, j);
+            printf("Enter element for [%d][%d]: ", i, j);
             scanf("%d", &a[i][j]);
         }
     }
@@ -24,14 +25,14 @@ int main()
     {
         for (int j = 0; j < bcol; j++)
         {
-            printf("Enter elements for [%d][%d]:\n", i, j);
+            printf("Enter element for [%d][%d]: ", i, j);
             scanf("%d", &b[i][j]);
         }
     }
 
-    if (arow != bcol)
+    if (acol != brow)
     {
-        printf("Matrix multlipication is not possible.\n");
+        printf("Matrix multiplication is not possible.\n");
         return 1;
     }
 
@@ -49,16 +50,17 @@ int main()
         {
             for (int k = 0; k < acol; k++)
             {
-                c[i][j];
+                c[i][j] += a[i][k] * b[k][j];
             }
         }
     }
-    printf("The product of 2 matrices is :\n");
+
+    printf("The product of the 2 matrices is:\n");
     for (int i = 0; i < crow; i++)
     {
         for (int j = 0; j < ccol; j++)
         {
-            printf("%4d", c[i][j]);
+            printf("%4d ", c[i][j]);
         }
         printf("\n");
     }
