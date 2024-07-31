@@ -10,7 +10,7 @@ int main()
     {
         for (int j = 0; j < 4; j++)
         {
-            printf("Enter for [%d] [%d]", i, j);
+            printf("Enter for [%d] [%d]:", i, j);
             scanf("%d", &a[i][j]);
             if (a[i][j] % 2 == 0)
             {
